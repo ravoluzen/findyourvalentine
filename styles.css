@@ -1,0 +1,64 @@
+:root {
+    --romantic-pink: #ff69b4;
+    --romantic-red: #ff1493;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+}
+
+.valentine-image {
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 8px 32px rgba(255, 105, 180, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.valentine-image:hover {
+    transform: scale(1.05);
+}
+
+.celebration-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--romantic-pink);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.email-btn {
+    font-family: 'Poppins', sans-serif;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border-width: 2px;
+}
+
+.email-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .celebration-text {
+        font-size: 2rem;
+    }
+    
+    .valentine-image {
+        max-width: 250px;
+    }
+}
